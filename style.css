@@ -15,6 +15,9 @@ body{
     color: white;
 
 }
+#navtext:hover{
+    border-bottom: solid 2px white;
+}
 .mybtn{
     background:transparent !important;
     border: solid 2px white  !important;
@@ -33,6 +36,10 @@ body{
     border: none !important;
     font-size: larger;
     transition: all 0.5s ease-in;
+}
+.otherbtn:hover{
+    background: white !important;
+    color: var(--main) !important;
 }
 .header{
     width: 100%;
@@ -132,4 +139,17 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
     padding: 0;
     margin: 0;
     cursor: pointer;
+}
+.blogcard{
+    background: white;
+    padding: 20px;
+    width: 20%;
+    height: 250px;;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    transition: all 0.1s ease-in;
+}
+.blogcard:hover{
+    border: solid 2px var(--main);
+    background-color:#f4f4f44c;
 }
