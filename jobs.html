@@ -198,14 +198,66 @@
             </div>
         </div> -->
     </header>
-    <div class="main my-3">
+    <div class="main ">
 
-        <div class="row">
-            <div class="col-sm-3 p-5">
-                this is side bar
+        <div class="row p-5">
+            <div class="col-sm-3 sidebar p-4">
+                <div class=" jobfilter d-flex flex-row justify-content-between">
+                    <h4 class="text-left">Filter Jobs</h4>
+                    <button class=" jbtn">Clear all</button>
+                </div>
+                <div class="job_coll">
+                    <button class="collapsible">Job Type</button>
+                    <div class="content">
+                      <label class="from-label"><input class="from-control" type="checkbox" name="option1" value="1"> Full time</label><br>
+                      <label class="from-label"><input class="from-control" type="checkbox" name="option2" value="2">Part time</label><br>
+                    </div>
+                </div>
+                <div class="job_coll">
+                    <button class="collapsible">Salary</button>
+                    <div class="content">
+                      <label class="from-label"><input class="from-control" type="checkbox" name="option1" value="1">0-60,0000</label><br>
+                      <label class="from-label"><input class="from-control" type="checkbox" name="option2" value="2">70,0000-80,0000</label><br>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-9">
-                this is main bar
+                <div class="row d-flex  align-item-center justify-content-center">
+                    <div class="col-sm-4 d-flex align-item-center justify-content-center my-2">
+                        <div class="jobcard p-3 ">
+                            <div class="card-title" style="font-weight: bold;font-size:large">Create Account</div>
+                            <div class="card-text">
+            
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem recusandae, eligendi quod cupiditate, consectetur praesentium accusamus eius laudantium mollitia 
+                            </div>
+                            <a href="" ><button class="btn jobbtn my-3">Apply Now</button></a>
+                            <a href="" ><button class="btn jobbtn1 my-3">View detail</button></a>
+                        </div>
+                </div>
+                    
+                <div class="col-sm-4 d-flex align-item-center justify-content-center my-2">
+                    <div class="jobcard p-3 ">
+                        <div class="card-title" style="font-weight: bold;font-size:large">Create Account</div>
+                        <div class="card-text">
+        
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem recusandae, eligendi quod cupiditate, consectetur praesentium accusamus eius laudantium mollitia 
+                        </div>
+                        <a href="" ><button class="btn jobbtn my-3">Apply Now</button></a>
+                        <a href="" ><button class="btn jobbtn1 my-3">View detail</button></a>
+                    </div>
+            </div>
+            <div class="col-sm-4 d-flex align-item-center justify-content-center my-2">
+                <div class="jobcard p-3 ">
+                    <div class="card-title" style="font-weight: bold;font-size:large">Create Account</div>
+                    <div class="card-text">
+    
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem recusandae, eligendi quod cupiditate, consectetur praesentium accusamus eius laudantium mollitia 
+                    </div>
+                    <a href="" ><button class="btn jobbtn my-3">Apply Now</button></a>
+                    <a href="" ><button class="btn jobbtn1 my-3">View detail</button></a>
+                </div>
+        </div>
+
             </div>
         </div>
     </div>
@@ -257,6 +309,30 @@
             </div>
         </div>
     </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        
+        window.onload = function() {
+            for (i = 0; i < coll.length; i++) {
+              coll[i].click();
+            }
+          }
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
